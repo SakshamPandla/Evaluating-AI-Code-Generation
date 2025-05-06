@@ -1,0 +1,14 @@
+| Type       | Error                                                            | Description                                                                                              |
+| ---------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Syntax     | Scafold                                                          | Misspelled widget name. Should be Scaffold.                                                              |
+| Syntax     | Missing comma after key: \_formKey                               | Form widget instantiation was missing a comma between parameters, breaking widget structure.             |
+| Syntax     | Map\<Widget, dynamic> instead of Map\<String, dynamic>           | Wrong generic types for \_fields; keys should be Strings, not Widgets.                                   |
+| Syntax     | onsaved instead of onSaved                                       | Dart is case-sensitive; the correct method is onSaved.                                                   |
+| Syntax     | = used instead of => in lambda function                          | Incorrect assignment syntax; should be => (arrow function) in Dart lambdas.                              |
+| Syntax     | \_buildField returns List                                        | The function was returning a List instead of a Widget, conflicting with how it's used in the UI.         |
+| Syntax     | super(key); instead of super(key: key);                          | Incorrect use of super in constructor. In Dart, named parameters must be passed using key: value syntax. |
+| Type       | val from onSaved used without null safety                        | int.tryParse(val) assumes val is a String; should use val ?? '' to prevent null errors.                  |
+| Logical    | \_formKey.currentState?.validate() ?? true                       | Logic error: defaulting to true means invalid forms still submit; should be ?? false.                    |
+| Logical    | No initialValue in DropdownButtonFormField                       | Could cause runtime issues if validation or rebuilding happens; initialValue should be provided.         |
+| Structural | TextFormField in number case may save null                       | Parsing empty input results in null, which might cause issues downstream.                                |
+| Structural | SizedBox.expand() instead of SizedBox.shrink() in default switch | Incorrect fallback widget; expand takes all space, shrink is more appropriate for a placeholder widget.  |
