@@ -1,0 +1,9 @@
+| Type          | Error                                                                |
+| ------------- | -------------------------------------------------------------------- |
+| Syntax        | `main()` should be `public static void main(String[] args)`          |
+| Syntax        | `default:` missing colon (`:`) in switch-case                        |
+| Type Error    | Passing `String` to a method expecting numerical logic (`<`, `+=`)   |
+| Logic Error   | No curly braces in `withdraw()` causes misleading print statements   |
+| Type Mismatch | Reading a `double` into a `String` variable                          |
+| Operator Bug  | `=+` instead of `+=`                                                 |
+| Runtime Risk  | Infinite loop with no graceful exit mechanism (`System.exit()` etc.) |
