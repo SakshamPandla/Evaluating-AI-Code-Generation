@@ -1,0 +1,18 @@
+| Type          | Error                                        | Description                                             |
+| ------------- | -------------------------------------------- | ------------------------------------------------------- |
+| Syntax        | `UPDATT INTO`                                | Nonsense syntax; `UPDATE` never uses `INTO`.            |
+| Syntax        | `NOW`                                        | Missing parentheses: `NOW()` is a function.             |
+| Syntax        | `==`                                         | Not valid in SQL (should be `=`).                       |
+| Syntax        | `INER JOIN`                                  | Misspelled `INNER JOIN`.                                |
+| Syntax        | `CONTAIN`                                    | Should be `LIKE` or `ILIKE`.                            |
+| Syntax        | `HAVNG`, `>=>`                               | Invalid keyword and operator.                           |
+| Syntax        | `ORDERY`, `DSE`                              | Misspelled `ORDER BY DESC`.                             |
+| Syntax        | `IF EXISTS` in `ON DELETE`                   | Used incorrectly — belongs in `DROP TABLE`.             |
+| Syntax        | `LIMIT OFFSET`                               | Offset should be an integer, not `'twenty'`.            |
+| Logical       | Mixing `UPDATE` and `SELECT`                 | Impossible; `UPDATE` doesn't go with `SELECT` directly. |
+| Logical       | `BETWEEN '01-32-2024' AND '2024-02-30'`      | Invalid date formats and nonexistent dates.             |
+| Logical       | `NULL = c.email`                             | Nonsense logic; should be `c.email IS NULL`.            |
+| Structural    | No `FROM` clause in `SELECT`                 | Yet `SELECT` is being used.                             |
+| Semantic      | Misplaced `JOIN suppliers USING supplier_id` | No context for it; placed arbitrarily.                  |
+| Semantic      | Aliasing misuse                              | `GROUP BY 2` relies on broken `SELECT`.                 |
+| Column Issues | `pricee`, `date_orderd`, etc.                | Likely typos or nonexistent columns.                    |

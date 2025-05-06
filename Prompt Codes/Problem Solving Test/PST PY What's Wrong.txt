@@ -1,0 +1,12 @@
+| Type       | Error                                                 | Description                                                               |
+| ---------- | ----------------------------------------------------- | ------------------------------------------------------------------------- |
+| Syntax     | def **init**(self name, hours, rate)                  | Missing commas between parameters.                                        |
+| Syntax     | self,rate == rate                                     | Invalid syntax; misuses comma and comparison operator.                    |
+| Syntax     | def calculate\_salary(self)                           | Missing colon after function definition.                                  |
+| Logical    | self.name == name                                     | Uses comparison (==) instead of assignment (=).                           |
+| Logical    | self.hours == hours                                   | Same as above — comparison instead of assignment.                         |
+| Logical    | salary = hours / rate                                 | Uses undefined local variables hours and rate instead of self.hours/rate. |
+| Name Error | overtimee                                             | Typo; variable overtimee is not defined. Should be overtime.              |
+| Name Error | employeez                                             | Undefined variable; typo for employees.                                   |
+| Type Error | "300" (as rate)                                       | Rate should be numeric, not string.                                       |
+| Type Error | print("Total Salary: Rs." + self.calculate\_salary()) | Cannot concatenate str with float; must cast to str or use f-string.      |
